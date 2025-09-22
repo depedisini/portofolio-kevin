@@ -236,7 +236,7 @@ nav ul li a:hover {
 }
 
 .contact-button:hover {
-    background-color: #c400c4; /* Ganti ini (versi lebih gelap dari magenta) */
+    background-color: var(--accent); /* Ganti ini (versi lebih gelap dari magenta) */
 }
 
 .social-links {
@@ -338,6 +338,17 @@ footer {
         gap: 1.5rem; /* Sedikit kurangi jarak antar kartu projek */
     }
     
+    /* Di dalam blok @media (max-width: 768px) { ... } */
+
+    /* 6. PERBAIKAN SECTION ORGANISASI */
+    .organization-entry {
+        flex-direction: column; /* Susun dari atas ke bawah */
+        align-items: center;
+    }
+
+    .organization-info {
+        margin-bottom: 2rem; /* Jarak antara info dan daftar program kerja */
+    }
 }
 
 /* Kondisi awal: elemen disembunyikan dan digeser sedikit ke bawah */
@@ -359,7 +370,9 @@ footer {
 
 #home::after,
 #about::after,
-#projects::after {
+#projects::after,
+#volunteering::after,
+#organization::after {
     content: '';
     display: block;
     width: 500px;  /* <-- Di sini kita bisa atur panjang garisnya */
@@ -399,4 +412,163 @@ footer {
 .logo #animated-text span.fall-in {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* =================================== */
+/* ===== SECTION: PENGALAMAN ORGANISASI ===== */
+/* =================================== */
+
+.organization-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Jarak antar entri organisasi */
+}
+
+.organization-entry {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start; /* Konten dimulai dari atas */
+}
+
+/* Kolom Kiri: Info & Logo */
+.organization-info {
+    flex-basis: 250px; /* Lebar tetap untuk kolom kiri */
+    flex-shrink: 0; /* Mencegah kolom ini menyusut */
+    text-align: center;
+}
+
+.org-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Membuat logo menjadi bulat */
+    object-fit: contain;
+    background-color: #fff; /* Latar belakang putih agar logo terlihat jelas */
+    padding: 5px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--border-color);
+}
+
+.org-name {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.org-role {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Kolom Kanan: Program Kerja */
+.organization-programs {
+    flex-grow: 1; /* Biarkan kolom ini mengisi sisa ruang */
+    display: grid;
+    grid-template-columns: 1fr; /* Default 1 kolom, bisa diubah jika perlu */
+    gap: 1rem;
+}
+
+.program-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.program-card h4 {
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+/* =================================== */
+/* ===== SECTION: VOLUNTEER (GAYA BARU) ===== */
+/* =================================== */
+
+.volunteer-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: 1 kolom untuk mobile */
+    gap: 1.5rem; /* Jarak antar kartu di mobile */
+}
+
+/* Aturan untuk layar tablet (lebar minimal 600px) */
+@media (min-width: 600px) {
+    .volunteer-grid {
+        grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom */
+    }
+}
+
+/* Aturan untuk layar desktop (lebar minimal 992px) */
+@media (min-width: 992px) {
+    .volunteer-grid {
+        grid-template-columns: repeat(3, 1fr); /* Menjadi 3 kolom seperti yang Anda inginkan */
+        gap: 2rem;
+    }
+}
+
+.volunteer-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.volunteer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.volunteer-image {
+    aspect-ratio: 1 / 1;
+}
+
+.volunteer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.volunteer-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.volunteer-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.volunteer-description {
+    margin-bottom: 1rem;
+    color: var(--text-secondary); /* Menggunakan warna teks sekunder */
+    flex-grow: 1;
+}
+
+.volunteer-tags {
+    margin-bottom: 1rem;
+}
+
+.volunteer-tags span {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.volunteer-link {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--accent);
+    align-self: flex-start;
+}
+
+.volunteer-link:hover {
+    text-decoration: underline;
 }
