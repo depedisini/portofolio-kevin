@@ -1,0 +1,319 @@
+/* ===== FONADSI & RESET DASAR ===== */
+
+/* Menggunakan 'border-box' memudahkan perhitungan ukuran elemen */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang bersih dan modern */
+    background-color: #f4f4f4; /* Warna latar belakang abu-abu sangat muda */
+    color: #333; /* Warna teks utama (abu-abu tua) */
+    line-height: 1.6; /* Jarak antar baris teks agar mudah dibaca */
+}
+
+/* ===== HEADER & NAVIGASI ===== */
+
+header {
+    background-color: #ffffff; /* Latar belakang header putih */
+    padding: 1rem 5%;        /* Padding atas-bawah 1rem, kiri-kanan 5% dari layar */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Memberi bayangan halus di bawah header */
+    position: sticky;         /* Membuat header tetap di atas saat di-scroll */
+    top: 0;
+    z-index: 1000;            /* Memastikan header selalu di lapisan paling atas */
+}
+
+/* ===== GAYA UMUM UNTUK SEMUA SECTION ===== */
+
+section {
+    padding: 4rem 5%; /* Padding atas-bawah 4rem, kiri-kanan 5% */
+}
+
+/* ===== SECTION: HOME (HERO) ===== */
+
+#home {
+    display: flex;             /* Mengaktifkan Flexbox, cara modern untuk mengatur layout */
+    flex-direction: column;    /* Menumpuk item dari atas ke bawah */
+    justify-content: center;   /* Menyelaraskan item di tengah secara vertikal */
+    align-items: center;       /* Menyelaraskan item di tengah secara horizontal */
+    
+    height: 90vh;              /* Mengatur tinggi section menjadi 90% dari tinggi layar browser */
+    text-align: center;        /* Membuat teks di dalamnya rata tengah */
+    
+    /* Mengurangi padding atas-bawah default agar perhitungan vh lebih pas */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+nav {
+    display: flex;                 /* Mengaktifkan Flexbox untuk layout yang fleksibel */
+    justify-content: space-between;/* Mendorong logo dan menu ke ujung yang berlawanan */
+    align-items: center;           /* Menyelaraskan item secara vertikal di tengah */
+}
+
+.logo {
+    font-size: 1.5rem;          /* Ukuran font untuk logo */
+    font-weight: bold;          /* Membuat font tebal */
+    color: #333;
+    text-decoration: none;      /* Menghilangkan garis bawah dari link */
+}
+
+nav ul {
+    list-style: none; /* Menghilangkan titik-titik dari daftar */
+    display: flex;    /* Menggunakan Flexbox lagi agar item menu berjajar horizontal */
+}
+
+nav ul li {
+    margin-left: 20px; /* Memberi jarak antar item menu */
+}
+
+nav ul li a {
+    color: #555;                 /* Warna link menu */
+    text-decoration: none;       /* Menghilangkan garis bawah */
+    font-weight: 500;
+    transition: color 0.3s ease; /* Animasi perubahan warna saat disentuh mouse */
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Warna link berubah menjadi biru saat mouse di atasnya */
+}
+
+#home h1 {
+    font-size: 3.5rem;   /* Ukuran font yang sangat besar untuk judul utama */
+    margin-bottom: 1rem; /* Memberi jarak antara judul dan paragraf di bawahnya */
+}
+
+#home p {
+    font-size: 1.25rem; /* Ukuran font yang sedikit lebih besar untuk sub-judul */
+    color: #666;         /* Warna abu-abu agar tidak terlalu bersaing dengan judul */
+}
+
+/* ===== GAYA JUDUL SECTION YANG BISA DIPAKAI ULANG ===== */
+
+.section-title {
+    text-align: center; /* Membuat judul selalu di tengah */
+    font-size: 2.5rem;
+    margin-bottom: 3rem; /* Memberi jarak yang cukup ke konten di bawahnya */
+}
+
+
+/* ===== SECTION: TENTANG SAYA ===== */
+
+.about-container {
+    display: flex;         /* Mengaktifkan Flexbox */
+    align-items: center;   /* Menyelaraskan kolom (gambar & teks) agar sama tinggi di tengah */
+    gap: 2rem;             /* Memberi jarak 2rem di antara gambar dan teks */
+}
+
+.about-image {
+    flex: 1; /* Memberi jatah 1 bagian ruang untuk kolom gambar */
+    max-width: 40%; /* Membatasi lebar maksimum gambar agar tidak terlalu besar */
+}
+
+.about-text {
+    flex: 1.5; /* Memberi jatah 1.5 bagian ruang untuk kolom teks (sedikit lebih lebar) */
+}
+
+.about-image img {
+    width: 100%;                  /* Membuat gambar mengisi penuh kolomnya */
+    border-radius: 10px;          /* Memberi sudut yang sedikit membulat */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Bayangan halus agar gambar 'terangkat' */
+}
+
+.about-text p {
+    margin-bottom: 1rem; /* Memberi jarak antar paragraf */
+    font-size: 1.1rem;
+    line-height: 1.7;    /* Jarak baris yang lebih lega agar nyaman dibaca */
+}
+
+/* ===== SECTION: PROJEK ===== */
+
+.projects-grid {
+    display: grid;
+    /* Membuat kolom-kolom yang lebarnya minimal 300px, dan akan menyesuaikan jumlahnya sesuai lebar layar */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Jarak antar kartu */
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Memastikan gambar tidak keluar dari sudut yang membulat */
+    display: flex;
+    flex-direction: column; /* Menumpuk konten kartu dari atas ke bawah */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efek terangkat saat disentuh mouse */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px; /* Tinggi gambar yang seragam untuk semua kartu */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+}
+
+.project-content {
+    padding: 1.5rem;
+    flex-grow: 1; /* Membuat area konten ini mengisi sisa ruang di kartu */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Mendorong tag dan link ke bawah agar posisi tombol selalu sama */
+}
+
+.project-tags {
+    margin-bottom: 1rem;
+}
+
+.project-tags span {
+    background-color: #eee;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #007BFF;
+    align-self: flex-start; /* Mencegah link melebar penuh */
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== SECTION: KONTAK ===== */
+
+#contact {
+    text-align: center;
+    background-color: #ffffff; /* Beri latar belakang yang berbeda agar menonjol */
+}
+
+.contact-message {
+    max-width: 600px;
+    margin: 0 auto 2rem; /* Atas 0, Kiri-Kanan auto, Bawah 2rem */
+    font-size: 1.1rem;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+.social-links {
+    margin-top: 3rem; /* Jarak dari tombol email ke ikon sosial media */
+}
+
+.social-links a {
+    font-size: 2rem; /* Ukuran ikon */
+    color: #333;
+    margin: 0 1rem; /* Jarak antar ikon */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007BFF; /* Warna ikon berubah saat disentuh mouse */
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* =================================== */
+/* ===== RESPONSIVE DESIGN (MOBILE) ===== */
+/* =================================== */
+
+@media (max-width: 768px) {
+    /* Di dalam blok @media (max-width: 768px) { ... } */
+
+    /* 1. PERBAIKAN UMUM */
+    .section-title {
+        font-size: 2rem; /* Kecilkan ukuran semua judul section */
+        margin-bottom: 2rem;
+    }
+
+    section {
+        padding: 2.5rem 5%; /* Kurangi padding atas-bawah section */
+    }
+
+    /* 2. HEADER & NAVIGASI */
+    nav {
+        flex-direction: column; /* Susun logo dan menu dari atas ke bawah */
+        gap: 10px; /* Beri sedikit jarak */
+    }
+
+    nav ul {
+        padding-left: 0; /* Hapus padding default dari list */
+        width: 100%; /* Pastikan menu memenuhi lebar */
+        display: flex;
+        justify-content: center; /* Posisikan menu di tengah */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Kurangi jarak antar menu */
+    }
+
+    /* 3. HERO SECTION */
+    #home h1 {
+        font-size: 2.5rem; /* Kecilkan ukuran font judul utama */
+    }
+
+    #home p {
+        font-size: 1.1rem; /* Kecilkan ukuran sub-judul */
+    }
+
+    /* 4. ABOUT SECTION */
+    .about-container {
+        flex-direction: column; /* Ini adalah kuncinya! Ubah layout jadi vertikal */
+        text-align: center; /* Pusatkan teks agar rapi */
+    }
+
+    .about-image {
+        max-width: 60%; /* Batasi lebar gambar agar tidak terlalu besar di HP */
+        margin-bottom: 2rem;
+    }
+
+    .about-text {
+        flex: 1; /* Hapus rasio, biarkan lebarnya otomatis */
+    }
+
+    /* 5. PROJECTS SECTION */
+    .projects-grid {
+        gap: 1.5rem; /* Sedikit kurangi jarak antar kartu projek */
+    }
+    
+}
+
