@@ -29,8 +29,8 @@ window.addEventListener('scroll', revealElements);
 const animatedTextElement = document.getElementById('animated-text');
 const texts = [
     "Kevin Diaz Pramono",
-    "Mahasiswa Bina Nusantara",
-    "Cyber Security Student"
+    "BINUS University Student",
+    "Cyber Security Program"
 ];
 let textIndex = 0;
 let charIndex = 0;
