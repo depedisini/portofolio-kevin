@@ -1,6 +1,20 @@
-/* ===== FONADSI & RESET DASAR ===== */
+/* =================================== */
+/* ===== PALET WARNA (TEMA) ===== */
+/* =================================== */
+:root {
+    --background-dark: #120f1a;      /* Latar belakang utama (Hitam Keunguan) */
+    --background-light: #1d1a29;     /* Latar belakang sekunder (untuk kartu/header) */
+    --text-primary: #e0e0e0;         /* Warna teks utama (Putih keabuan) */
+    --text-secondary: #a0a0a0;       /* Warna teks pendukung (Abu-abu terang) */
+    --accent: #FFB800;               /* Warna aksen/sorotan (Magenta) */
+    --border-color: #3c385c;         /* Warna untuk garis batas */
+}
 
-/* Menggunakan 'border-box' memudahkan perhitungan ukuran elemen */
+/* ===== EFEK SMOOTH SCROLL ===== */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,21 +22,22 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang bersih dan modern */
-    background-color: #f4f4f4; /* Warna latar belakang abu-abu sangat muda */
-    color: #333; /* Warna teks utama (abu-abu tua) */
-    line-height: 1.6; /* Jarak antar baris teks agar mudah dibaca */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-dark); 
+    color: var(--text-primary);               
+    line-height: 1.6;
 }
 
 /* ===== HEADER & NAVIGASI ===== */
 
 header {
-    background-color: #ffffff; /* Latar belakang header putih */
-    padding: 1rem 5%;        /* Padding atas-bawah 1rem, kiri-kanan 5% dari layar */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Memberi bayangan halus di bawah header */
-    position: sticky;         /* Membuat header tetap di atas saat di-scroll */
+    background-color: var(--background-light); /* Ganti ini */
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    border-bottom: 1px solid var(--border-color); /* Tambahkan ini */
+    position: sticky;
     top: 0;
-    z-index: 1000;            /* Memastikan header selalu di lapisan paling atas */
+    z-index: 1000;
 }
 
 /* ===== GAYA UMUM UNTUK SEMUA SECTION ===== */
@@ -34,17 +49,13 @@ section {
 /* ===== SECTION: HOME (HERO) ===== */
 
 #home {
-    display: flex;             /* Mengaktifkan Flexbox, cara modern untuk mengatur layout */
-    flex-direction: column;    /* Menumpuk item dari atas ke bawah */
-    justify-content: center;   /* Menyelaraskan item di tengah secara vertikal */
-    align-items: center;       /* Menyelaraskan item di tengah secara horizontal */
-    
-    height: 90vh;              /* Mengatur tinggi section menjadi 90% dari tinggi layar browser */
-    text-align: center;        /* Membuat teks di dalamnya rata tengah */
-    
-    /* Mengurangi padding atas-bawah default agar perhitungan vh lebih pas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
     padding-top: 0;
-    padding-bottom: 0;
 }
 
 nav {
@@ -56,7 +67,7 @@ nav {
 .logo {
     font-size: 1.5rem;          /* Ukuran font untuk logo */
     font-weight: bold;          /* Membuat font tebal */
-    color: #333;
+    color: var(--accent);
     text-decoration: none;      /* Menghilangkan garis bawah dari link */
 }
 
@@ -70,14 +81,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #555;                 /* Warna link menu */
-    text-decoration: none;       /* Menghilangkan garis bawah */
+    color: var(--text-secondary); /* Ganti ini */
+    text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease; /* Animasi perubahan warna saat disentuh mouse */
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #007BFF; /* Warna link berubah menjadi biru saat mouse di atasnya */
+    color: var(--accent); /* Ganti ini */
 }
 
 #home h1 {
@@ -86,8 +97,8 @@ nav ul li a:hover {
 }
 
 #home p {
-    font-size: 1.25rem; /* Ukuran font yang sedikit lebih besar untuk sub-judul */
-    color: #666;         /* Warna abu-abu agar tidak terlalu bersaing dengan judul */
+    font-size: 1.25rem;
+    color: var(--text-secondary); /* Ganti ini */
 }
 
 /* ===== GAYA JUDUL SECTION YANG BISA DIPAKAI ULANG ===== */
@@ -102,9 +113,9 @@ nav ul li a:hover {
 /* ===== SECTION: TENTANG SAYA ===== */
 
 .about-container {
-    display: flex;         /* Mengaktifkan Flexbox */
-    align-items: center;   /* Menyelaraskan kolom (gambar & teks) agar sama tinggi di tengah */
-    gap: 2rem;             /* Memberi jarak 2rem di antara gambar dan teks */
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .about-image {
@@ -132,24 +143,24 @@ nav ul li a:hover {
 
 .projects-grid {
     display: grid;
-    /* Membuat kolom-kolom yang lebarnya minimal 300px, dan akan menyesuaikan jumlahnya sesuai lebar layar */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem; /* Jarak antar kartu */
+    gap: 2rem;
 }
 
 .project-card {
-    background-color: #ffffff;
+    background-color: var(--background-light); /* Ganti ini */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden; /* Memastikan gambar tidak keluar dari sudut yang membulat */
+    border: 1px solid var(--border-color); /* Tambahkan ini */
+    box-shadow: none; /* Hapus bayangan default */
+    overflow: hidden;
     display: flex;
-    flex-direction: column; /* Menumpuk konten kartu dari atas ke bawah */
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Efek terangkat saat disentuh mouse */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Ganti ini (bayangan gelap) */
 }
 
 .project-image img {
@@ -180,7 +191,8 @@ nav ul li a:hover {
 }
 
 .project-tags span {
-    background-color: #eee;
+    background-color: var(--border-color); /* Ganti ini */
+    color: var(--text-primary); /* Tambahkan ini */
     padding: 0.3rem 0.6rem;
     border-radius: 5px;
     font-size: 0.8rem;
@@ -191,8 +203,8 @@ nav ul li a:hover {
     display: inline-block;
     text-decoration: none;
     font-weight: bold;
-    color: #007BFF;
-    align-self: flex-start; /* Mencegah link melebar penuh */
+    color: var(--accent); /* Ganti ini */
+    align-self: flex-start;
 }
 
 .project-link:hover {
@@ -203,7 +215,7 @@ nav ul li a:hover {
 
 #contact {
     text-align: center;
-    background-color: #ffffff; /* Beri latar belakang yang berbeda agar menonjol */
+    background-color: transparent; /* Ganti ini */
 }
 
 .contact-message {
@@ -224,7 +236,7 @@ nav ul li a:hover {
 }
 
 .contact-button:hover {
-    background-color: #0056b3;
+    background-color: #c400c4; /* Ganti ini (versi lebih gelap dari magenta) */
 }
 
 .social-links {
@@ -232,14 +244,25 @@ nav ul li a:hover {
 }
 
 .social-links a {
-    font-size: 2rem; /* Ukuran ikon */
-    color: #333;
-    margin: 0 1rem; /* Jarak antar ikon */
+    font-size: 2rem;
+    color: var(--text-secondary); /* Ganti ini */
+    margin: 0 1rem;
     transition: color 0.3s ease;
 }
 
-.social-links a:hover {
-    color: #007BFF; /* Warna ikon berubah saat disentuh mouse */
+/* Hover untuk GitHub */
+.social-links a[href*="github.com"]:hover {
+    color: #FFFFFF; /* Putih terang */
+}
+
+/* Hover untuk LinkedIn */
+.social-links a[href*="linkedin.com"]:hover {
+    color: #0A66C2; /* Biru khas LinkedIn */
+}
+
+/* Hover untuk Instagram */
+.social-links a[href*="instagram.com"]:hover {
+    color: #C13584; /* Pink/Ungu khas Instagram */
 }
 
 
@@ -317,3 +340,63 @@ footer {
     
 }
 
+/* Kondisi awal: elemen disembunyikan dan digeser sedikit ke bawah */
+.revealable {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Kondisi akhir: elemen muncul sepenuhnya di posisi normal */
+.revealable.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =================================== */
+/* ===== PEMBATAS SECTION (BARU) ===== */
+/* =================================== */
+
+#home::after,
+#about::after,
+#projects::after {
+    content: '';
+    display: block;
+    width: 500px;  /* <-- Di sini kita bisa atur panjang garisnya */
+    height: 2px;   /* Ketebalan garis */
+    background-color: var(--border-color);
+    margin: 3rem auto; /* Ini yang membuatnya seimbang (atas-bawah) dan di tengah (kiri-kanan) */
+}
+
+.logo #animated-text {
+    display: inline-block; /* Penting untuk animasi tertentu */
+    overflow: hidden;      /* Penting untuk efek typing */
+    white-space: nowrap;   /* Penting untuk efek typing */
+    animation: none;       /* Reset animasi */
+}
+
+/* Kursor berkedip untuk efek typing */
+.logo #animated-text.typing::after {
+    content: '|';
+    display: inline-block;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Animasi kursor typing */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--text-primary); } /* Warna kursor */
+}
+
+/* Gaya untuk efek falling letter */
+.logo #animated-text span { /* Menargetkan setiap huruf */
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.logo #animated-text span.fall-in {
+    opacity: 1;
+    transform: translateY(0);
+}

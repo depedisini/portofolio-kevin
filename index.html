@@ -8,7 +8,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nama Anda | Web Portfolio</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <link rel="stylesheet" href="css/style.css">
@@ -17,7 +20,9 @@
 
     <header>
         <nav>
-            <a href="#home" class="logo">Kevin Diaz Pramono</a>
+            <a href="#home" class="logo">
+                <span id="animated-text"></span>
+            </a>
             <ul>
                 <li><a href="#about">About Me!</a></li>
                 <li><a href="#projects">Project and Others</a></li>
@@ -27,12 +32,12 @@
     </header>
 
     <main>
-        <section id="home">
+        <section id="home" class="revealable">
             <h1>Halo, saya Kevin Diaz Pramono</h1>
             <p>Seorang Mahasiswa yang tertarik dengan Cyber Security.</p>
         </section>
 
-        <section id="about">
+        <section id="about" class="revealable">
             <h2 class="section-title">Tentang Saya</h2>
             <div class="about-container">
                 <div class="about-image">
@@ -49,7 +54,7 @@
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="revealable">
             <h2 class="section-title">Project and Others</h2>
             <div class="projects-grid">
 
@@ -108,7 +113,7 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="revealable">
             <h2 class="section-title">Hubungi Saya</h2>
             <p class="contact-message">Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar menyapa. Jangan ragu untuk menghubungi saya!</p>
             <a href="mailto:email.anda@gmail.com" class="contact-button">Kirim Email</a>
