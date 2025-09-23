@@ -35,8 +35,8 @@
 
     <main>
         <section id="home" class="revealable">
-            <h1>Halo, saya Kevin Diaz Pramono</h1>
-            <p>Seorang Mahasiswa yang tertarik dengan Cyber Security.</p>
+            <h1>Hello! I'm Kevin Diaz Pramono</h1>
+            <p> Dedicated Cyber Security student, Exploring the frontiers of Cyber Security.</p>
         </section>
 
         <section id="about" class="revealable">
@@ -47,10 +47,10 @@
                 </div>
                 <div class="about-text">
                     <p>
-                        Paragraf 1 Perkenalan
+                        A Cyber Security student at BINUS University (B27) with a strong focus on Penetration Testing. I am passionate about the field of cyber security and am always looking for new challenges. My goal is to build a career in this industry, exploring roles not just in Penetration Testing but also in areas like Blue Team operations and even teaching.
                     </p>
                     <p>
-                        Paragraf 2 Lanjutan 1
+                        My projects show my passion for turning theory into practical solutions. I'm a fast learner and adapt well to a team, always ready for new challenges. I'm eager to join the industry not only to improve my technical skills but also to make a real contribution to keeping the digital world safe. I have a strong desire to learn new things in the cyber field.
                     </p>
                 </div>
             </div>
@@ -61,57 +61,131 @@
             <div class="projects-grid">
 
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project1.jpg" alt="Gambar Projek 1">
-                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">Isi Nama Projek atau Yang Lain</h3>
+                        <h3 class="project-title">VulnHub Machine HACKSUDO: THOR WriteUp</h3>
                         <p class="project-description">
-                            Deskripsi singkat mengenai projek ini, masalah yang dipecahkan, dan peran Anda.
+                            Exploited a Shellshock vulnerability in a .cgi script to gain a reverse shell with root privileges. I performed web enumeration to find a hidden cgi-bin directory with a vulnerable .sh file, which was then exploited using Metasploit.
                         </p>
                         <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                            <span>nmap</span>
+                            <span>dirbuster</span>
+                            <span>Burp Suite</span>
+                            <span>Metasploit</span>
                         </div>
-                        <a href="#" class="project-link">Lihat Detail &rarr;</a>
+                        <a href="https://docs.google.com/document/d/1QT68hdDydhqCcfvLYgYCEOJQsn8y8J7D_LxjP-Df37Y/edit?usp=sharing" class="project-link">See the Write Up &rarr;</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project2.jpg" alt="Gambar Projek 2">
-                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">Isi Nama Projek atau Yang Lain</h3>
+                        <h3 class="project-title">VulnHub Machine Inferno: 1.1 WriteUp</h3>
                         <p class="project-description">
-                            Isi Deskripsi Projek atau Yang Lain.
+                            Gained access by brute-forcing a login page with Hydra to find valid credentials, leading to a Codiad web interface. I exploited a Remote Code Execution vulnerability to get a shell. I then escalated privileges using a misconfigured tee command in the sudoers file to obtain root access.
                         </p>
                         <div class="project-tags">
-                            <span>Figma</span>
-                            <span>UI/UX</span>
+                            <span>nmap</span>
+                            <span>gobuster</span>
+                            <span>Hydra</span>
+                            <span>CVE-2018-14009</span>
                         </div>
-                        <a href="#" class="project-link">Lihat di Behance &rarr;</a>
+                        <a href="https://medium.com/@depepramon/write-up-of-inferno-1-1-vulnhub-machine-20324889b1bc" class="project-link">View in Medium &rarr;</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project3.jpg" alt="Gambar Projek 3">
-                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">Isi Nama Projek atau Yang Lain</h3>
+                        <h3 class="project-title">HackTheBox Machine: Chemistry WriteUp</h3>
                         <p class="project-description">
-                            Isi Deskripsi Projek atau Yang Lain.
+                            Successfully exploited a critical security flaw (CVE-2024-23346) in a web application to gain a reverse shell, then leveraged a directory traversal vulnerability (CVE-2024-23334) to access and retrieve the user and root flags.
                         </p>
                         <div class="project-tags">
-                            <span>Java</span>
-                            <span>OOP</span>
+                            <span>nmap</span>
+                            <span>CVE-2024-23346</span>
+                            <span>CVE-2024-23334</span>
                         </div>
-                        <a href="#" class="project-link">Lihat Kode &rarr;</a>
+                        <a href="https://docs.google.com/document/d/1of59zLR565m1ubfzOPsL4nT2tX03M5hZ3sB3N4vr00o/edit?usp=sharing" class="project-link">See the Write Up &rarr;</a>
                     </div>
                 </div>
-
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">HackTheBox Machine: Alert WriteUp</h3>
+                        <p class="project-description">
+                            Gained a user shell by exploiting a Blind Cross-Site Scripting (XSS) vulnerability to find a hidden subdomain. I then used a path traversal vulnerability to get a user's hashed password, which I cracked to access SSH and a local web server to gain root access.
+                        </p>
+                        <div class="project-tags">
+                            <span>nmap</span>
+                            <span>XSS</span>
+                            <span>LFI</span>
+                        </div>
+                        <a href="https://docs.google.com/document/d/1VdrQnMIO7Ub_vXZNLhTXfW0bQFaKEmFd_5tlP2bnSAY/edit?usp=sharing" class="project-link">See the Write Up &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">HackTheBox Machine: Sighless WriteUp</h3>
+                        <p class="project-description">
+                            Penetrated a Docker container by exploiting an SQLPad vulnerability to get a foothold as root. From there, I escalated privileges on the host machine using credentials found in a KeePass database, which I cracked, to log in as the root user.
+                        </p>
+                        <div class="project-tags">
+                            <span>nmap</span>
+                            <span>Burp Suite</span>
+                        </div>
+                        <a href="https://docs.google.com/document/d/1c5Gas7d0pAnCGevvJu30ots7sxBtD3rh5TsEOfLEkp0/edit?usp=sharing" class="project-link">See the Write Up &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Bug Finding on Ubiquiti Inc.</h3>
+                        <p class="project-description">
+                            My Friend and I discovered and reported an IDOR vulnerability on Ubiquiti's platform. 
+                        </p>
+                        <div class="project-tags">
+                            <span>IDOR</span>
+                            <span>Burp Suite</span>
+                        </div>
+                        <a href="https://www.linkedin.com/posts/kevin-diaz-pramono-11532a286_over-the-last-two-weeks-kevin-diaz-pramono-activity-7275044754680098816-tr7f?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEV1qiEBzq8pcZBbcnRxsbwehgcNvZt4RdY" class="project-link">View in LinkedIn &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Klara: Web Phising Detector</h3>
+                        <p class="project-description">
+                            Developed an AI-powered phishing detector named Klara, integrating VirusTotal, Google Gemini, and PhishTank APIs for comprehensive link analysis. The system provides intuitive security statuses and AI-driven explanations to help users avoid phishing threats.
+                        </p>
+                        <div class="project-tags">
+                            <span>Phising</span>
+                            <span>XSS</span>
+                            <span>Social Engineering</span>
+                        </div>
+                        <a href="https://www.canva.com/design/DAGzwlOw82U/UdHDLgsmXUEiIF-1rHko9g/edit?utm_content=DAGzwlOw82U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="project-link">View the Presentation &rarr;</a>
+                        <a href="https://docs.google.com/document/d/1aZeBMjuRSHpCrf5iBd3NN5WXptT8q9p2x9DfZtmcrFw/edit?usp=sharing" class="project-link">View the PKM Report &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Obatku: A Symptom Checker and Medicine Recommendation Website</h3>
+                        <p class="project-description">
+                            This project developed a user-friendly web application that provides medication recommendations based on user-inputted symptoms. Using a lightweight AI model, the system matches symptoms to common illnesses and treatments. The application aims to make health information more accessible by providing clear suggestions and user ratings, though it is not a substitute for professional medical advice.
+                        </p>
+                        <div class="project-tags">
+                            <span>Healthcare</span>
+                        </div>
+                        <a href="https://www.canva.com/design/DAGoh1QWEFI/ruufl2RMFR1Vge8sF8NT-w/edit?utm_content=DAGoh1QWEFI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="project-link">View the Presentation &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">YOKMAIN: A Platform for Discovering Local Sports Groups.</h3>
+                        <p class="project-description">
+                            A web platform connecting people with local sports groups. Users can find and join teams based on location, sport, and skill level, fostering community and healthy lifestyles.
+                        </p>
+                        <div class="project-tags">
+                            <span>K-Nearest Neighbour</span>
+                        </div>
+                        <a href="https://www.canva.com/design/DAGaHtiHOHg/N1dIrWOzJ-08-yxIEGEmag/edit?utm_content=DAGaHtiHOHg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="project-link">View the Presentation &rarr;</a>
+                        <a href="https://docs.google.com/document/d/1iFcA7GiC6ws45KJeSZn3KYkGwvkNNnhBTue5_g84-Jo/edit?usp=sharing" class="project-link">View the Report &rarr;</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -121,10 +195,13 @@
             </div>
             <div class="volunteer-content"> <h3 class="volunteer-title">Freshmen Leader of B28</h3> <p class="volunteer-description"> I served as a Freshmen Leader at BINUS University, welcoming new students and guiding them through Orientation and Transition Programs (OTP), until Inauguration. My role focused on helping them adapt to campus life, fostering a sense of belonging, and ensuring a smooth start to their academic journey.
                 </p>
-                <div class="volunteer-tags"> <span>Manajemen Acara</span>
-                    <span>Kerja Tim</span>
+                <div class="volunteer-tags">
+                    <span>Leadership</span>
+                    <span>Public Speaking</span>
+                    <span>Presentation</span>
+                    <span>Teamwork</span>
                 </div>
-                <a href="#" class="volunteer-link">Lihat Sertifikat &rarr;</a> </div>
+                <a href="https://docs.google.com/document/d/1e0bwBMiURsjT-jiiDhJOMz7kEXcQcvaxPdc71LVv6_U/edit?usp=sharing" class="volunteer-link">Lihat Sertifikat &rarr;</a> </div>
         </div>
 
         <div class="volunteer-card">
@@ -137,10 +214,12 @@
                     I served as a Freshmen Partner at BINUS University, assisting my freshmen in adapting during their first year. My responsibilities included helping them understand BINUS culture, navigating the university's systems, building connections with faculty, and supporting them in their academic and social transition.
                 </p>
                 <div class="volunteer-tags">
-                    <span>Manajemen Acara</span>
-                    <span>Kerja Tim</span>
+                    <span>Leadership</span>
+                    <span>Public Speaking</span>
+                    <span>Presentation</span>
+                    <span>Teamwork</span>
+                    <span>Mentoring</span>
                 </div>
-                <a href="#" class="volunteer-link">Lihat Sertifikat &rarr;</a>
             </div>
         </div>
 
@@ -154,8 +233,12 @@
                     I participated as a volunteer in a socialization program at Karunia Christian High School, where I introduced and encouraged the development of anti-corruption values among high school students. This activity aimed to foster integrity and ethical behavior as essential characteristics for their future.
                 </p>
                 <div class="volunteer-tags">
-                    <span>Manajemen Acara</span>
-                    <span>Kerja Tim</span>
+                    <span>Leadership</span>
+                    <span>Public Speaking</span>
+                    <span>Presentation</span>
+                    <span>Teamwork</span>
+                    <span>Event Management</span>
+                    <span>Time Management</span>
                 </div>
                  </div>
         </div>
@@ -169,27 +252,34 @@
                 <p class="volunteer-description">
                     I volunteered as a teacher assistant at Cendana Early Childhood Education Center (PAUD), where I guided young children in their early learning journey. This experience allowed me to contribute to their foundational education and development in a nurturing environment.
                 </p>
-                <div class="volunteer-tags">
-                    <span>Manajemen Acara</span>
-                    <span>Kerja Tim</span>
-                </div>
-                 </div>
+            <div class="volunteer-tags">
+                <span>Leadership</span>
+                    <span>Public Speaking</span>
+                    <span>Presentation</span>
+                    <span>Teamwork</span>
+                    <span>Event Management</span>
+                    <span>Time Management</span>
+            </div>
+        </div>
         </div>
 
         <div class="volunteer-card">
             <div class="volunteer-image">
-                <img src="assets/images/volunteer5.jpg" alt="Gambar Kegiatan Volunteer 5">
+                <img src="assets/images/20240318_122153.jpg" alt="Gambar Kegiatan Volunteer 5">
             </div>
             <div class="volunteer-content">
                 <h3 class="volunteer-title">Field Researcher, Jakarta Marine Study.</h3>
-                <p class="volunteer-description">
-                    Isi Deskripsi
-                </p>
-                <div class="volunteer-tags">
-                    <span>Manajemen Acara</span>
-                    <span>Kerja Tim</span>
-                </div>
-                 </div>
+                    <p class="volunteer-description">
+                        For a university project focused on SDG 14: Life Below Water, my team conducted field research at Muara Angke. We interviewed local fishermen to document the firsthand impacts of marine pollution on their livelihoods and the coastal ecosystem.
+                    </p>
+                    <div class="volunteer-tags">
+                        <span>Public Speaking</span>
+                        <span>Presentation</span>
+                        <span>Teamwork</span>
+                        <span>Event Management</span>
+                    </div>
+                    <a href="https://docs.google.com/document/d/1I232q32aP-EYIshg7ZEG64vQiP1ypto_/edit?usp=sharing&ouid=116992388530649252945&rtpof=true&sd=true" class="project-link">View the Report &rarr;</a>
+            </div>
         </div>
         
         <div class="volunteer-card">
@@ -202,8 +292,10 @@
                     I volunteered as an usher for the talk show event at BIFEST, where I guided guests and participants, ensured smooth seating arrangements, and provided assistance to ensure a welcoming and organized experience.
                 </p>
                 <div class="volunteer-tags">
-                    <span>Manajemen Acara</span>
-                    <span>Kerja Tim</span>
+                    <span>Public Speaking</span>
+                    <span>Presentation</span>
+                    <span>Teamwork</span>
+                    <span>Time Management</span>
                 </div>
                  </div>
         </div>
@@ -224,11 +316,11 @@
                 <div class="organization-programs">
                     <div class="program-card">
                         <h4>Organization Expo as Cyber Security Community's Marketing</h4>
-                        <p>Isi Deskripsi</p>
+                        <p>As part of the marketing team for the Campus Organization Expo, I was responsible for developing and executing promotion strategies.</p>
                     </div>
                     <div class="program-card">
                         <h4>Cyber Security Community Welcoming Party 2025 as MC</h4>
-                        <p>Isi Deskripsi</p>
+                        <p>Serving as both MC and moderator, I hosted a welcoming party for new members. I guided the event flow, created an inclusive atmosphere, and led a talk show to facilitate discussion and connection among members.</p>
                     </div>
                 </div>
             </div>
@@ -237,13 +329,16 @@
 
         <section id="contact" class="revealable">
             <h2 class="section-title">My Contact</h2>
-            <p class="contact-message">Isi Pesan di sini</p>
-            <a href="mailto:kevin.pramono001@binus.ac.id" class="contact-button">Kirim Email</a>
+            <p class="contact-message">I am open to new opportunities. Feel free to get in touch!</p>
+            <a href="mailto:kevin.pramono001@binus.ac.id" class="contact-button">Send Me Email!</a>
             <div class="social-links">
                 <a href="https://medium.com/@depepramon" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
                 <a href="https://github.com/depedisini" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/kevin-diaz-pramono-11532a286" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://instagram.com/kevindiazpramono" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/62895367314661" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </section>
     </main>

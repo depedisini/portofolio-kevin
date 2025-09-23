@@ -187,16 +187,19 @@ nav ul li a:hover {
 }
 
 .project-tags {
+    display: flex; /* <-- KUNCI UTAMA: Aktifkan Flexbox */
+    flex-wrap: wrap; /* Izinkan tag turun baris jika benar-benar perlu (di layar super sempit) */
+    gap: 8px; /* Atur jarak antar tag dengan lebih modern dan konsisten */
     margin-bottom: 1rem;
 }
 
 .project-tags span {
-    background-color: var(--border-color); /* Ganti ini */
-    color: var(--text-primary); /* Tambahkan ini */
+    background-color: var(--border-color);
+    color: var(--text-primary);
     padding: 0.3rem 0.6rem;
     border-radius: 5px;
     font-size: 0.8rem;
-    margin-right: 5px;
+    /* Hapus 'margin-right' karena sudah diatur oleh 'gap' di atas */
 }
 
 .project-link {
@@ -250,6 +253,10 @@ nav ul li a:hover {
     transition: color 0.3s ease;
 }
 
+.social-links a[href*="medium.com"]:hover {
+    color: #808080; /* Putih terang */
+}
+
 /* Hover untuk GitHub */
 .social-links a[href*="github.com"]:hover {
     color: #FFFFFF; /* Putih terang */
@@ -265,7 +272,9 @@ nav ul li a:hover {
     color: #C13584; /* Pink/Ungu khas Instagram */
 }
 
-
+.social-links a[href*="whatsapp.com"] i:hover {
+    color: #25D366;
+}
 /* ===== FOOTER ===== */
 
 footer {
@@ -485,21 +494,22 @@ footer {
 
 .volunteer-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Default: 1 kolom untuk mobile */
-    gap: 1.5rem; /* Jarak antar kartu di mobile */
+    grid-template-columns: 1fr; /* Atau aturan kolom Anda yang lain */
+    gap: 1.5rem;
+    align-items: stretch; /* PENTING: Paksa semua item untuk sama tinggi */
 }
 
-/* Aturan untuk layar tablet (lebar minimal 600px) */
+/* Aturan untuk layar tablet */
 @media (min-width: 600px) {
     .volunteer-grid {
-        grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Aturan untuk layar desktop (lebar minimal 992px) */
+/* Aturan untuk layar desktop */
 @media (min-width: 992px) {
     .volunteer-grid {
-        grid-template-columns: repeat(3, 1fr); /* Menjadi 3 kolom seperti yang Anda inginkan */
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
 }
@@ -509,8 +519,8 @@ footer {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: flex; /* PENTING: Kartu menjadi flex container */
+    flex-direction: column; /* PENTING: Konten di dalamnya tersusun vertikal */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -531,7 +541,7 @@ footer {
 
 .volunteer-content {
     padding: 1.5rem;
-    flex-grow: 1;
+    flex-grow: 1; /* PENTING: Biarkan area konten ini tumbuh mengisi ruang */
     display: flex;
     flex-direction: column;
 }
@@ -544,12 +554,16 @@ footer {
 
 .volunteer-description {
     margin-bottom: 1rem;
-    color: var(--text-secondary); /* Menggunakan warna teks sekunder */
-    flex-grow: 1;
+    color: var(--text-secondary);
+    flex-grow: 1; /* PENTING: Biarkan paragraf deskripsi yang meregang */
 }
 
 .volunteer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-bottom: 1rem;
+    min-height: 50px; /* <-- TAMBAHKAN BARIS INI */
 }
 
 .volunteer-tags span {
