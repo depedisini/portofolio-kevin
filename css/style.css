@@ -391,10 +391,11 @@ footer {
 }
 
 .logo #animated-text {
-    display: inline-block; /* Penting untuk animasi tertentu */
-    overflow: hidden;      /* Penting untuk efek typing */
-    white-space: nowrap;   /* Penting untuk efek typing */
-    animation: none;       /* Reset animasi */
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: none;
+    min-width: 280px; /* <-- TAMBAHKAN BARIS INI */
 }
 
 /* Kursor berkedip untuk efek typing */
