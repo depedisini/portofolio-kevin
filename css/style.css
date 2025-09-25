@@ -23,9 +23,13 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-dark); 
-    color: var(--text-primary);               
+    background-color: var(--background-dark);
+    color: var(--text-primary);
     line-height: 1.6;
+
+    min-height: 100vh;          /* KUNCI 1: Pastikan body setidaknya setinggi layar */
+    display: flex;              /* KUNCI 2: Aktifkan Flexbox */
+    flex-direction: column;   /* KUNCI 3: Susun elemen (header, main, footer) dari atas ke bawah */
 }
 
 /* ===== HEADER & NAVIGASI ===== */
@@ -38,6 +42,10 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+main {
+    flex-grow: 1; /* KUNCI 4: Biarkan area main 'tumbuh' mengisi sisa ruang kosong */
 }
 
 /* ===== GAYA UMUM UNTUK SEMUA SECTION ===== */
@@ -586,4 +594,108 @@ footer {
 
 .volunteer-link:hover {
     text-decoration: underline;
+}
+
+/* =================================== */
+/* ===== DROPDOWN NAVIGASI ===== */
+/* =================================== */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-light);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; /* Pastikan dropdown di atas konten lain */
+}
+
+.dropdown-content a {
+    color: var(--text-primary) !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--border-color);
+    color: var(--accent) !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =================================== */
+/* ===== LAYOUT GRAFIK NILAI ===== */
+/* =================================== */
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap; /* Agar di layar kecil bisa turun ke bawah */
+    gap: 2rem;
+    justify-content: center;
+}
+
+.chart-wrapper {
+    flex: 1; /* Setiap grafik mengambil ruang yang sama */
+    min-width: 300px; /* Lebar minimum sebelum turun baris */
+    max-width: 500px;
+    text-align: center;
+}
+
+.chart-wrapper h3 {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+/* =================================== */
+/* ===== GAYA TABEL NILAI ===== */
+/* =================================== */
+
+.grades-table-container {
+    margin-top: 4rem; /* Jarak dari grafik ke tabel */
+}
+
+.semester-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.grades-table-container h3:first-child {
+    margin-top: 0; /* Hapus margin atas untuk judul semester pertama */
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse; /* Menyatukan border sel */
+    margin-bottom: 2rem;
+}
+
+.grades-table th, .grades-table td {
+    padding: 12px 15px; /* Padding di dalam sel */
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.grades-table thead {
+    background-color: var(--background-light); /* Warna header tabel */
+}
+
+.grades-table th {
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.grades-table tbody tr:hover {
+    background-color: var(--background-light); /* Efek hover pada baris */
 }

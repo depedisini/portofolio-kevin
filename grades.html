@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Diaz Pramono | Web Portfolio</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kevin Diaz Pramono | Web Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <span id="animated-text"></span>
+            </a>
+            <ul>
+                <li><a href="index.html#about">About Me!</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#volunteering">Volunteer</a></li>
+                <li><a href="index.html#organization">Organization</a></li>
+                <li class="dropdown">
+                    <a href="#">More &darr;</a>
+                    <div class="dropdown-content">
+                        <a href="grades.html">My Grades</a>
+                        <a href="experience.html">Working Experiences</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="grades" class="revealable">
+            <h2 class="section-title">My Grades</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                Here is a visualization of my academic performance throughout the semesters, showing both my Semester GPA (IPS) and Cumulative GPA (IPK).
+            </p>
+
+            <div class="chart-container">
+                <div class="chart-wrapper">
+                    <h3>Semester GPA (IPS)</h3>
+                    <canvas id="ipsChart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Cumulative GPA (IPK)</h3>
+                    <canvas id="ipkChart"></canvas>
+                </div>
+            </div>
+            <div class="grades-table-container revealable">
+                <!-- Semester 1 -->
+                <h3 class="semester-title">Semester 1</h3>
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Codes</th>
+                            <th>Courses</th>
+                            <th>SCU</th>
+                            <th>Grades</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>CHAR6013001</td><td>Character Building: Pancasila</td><td>2</td><td>A-</td></tr>
+                        <tr><td>COMP6047001</td><td>Algorithm and Programming</td><td>4/2</td><td>B+</td></tr>
+                        <tr><td>COMP6542001</td><td>Computer Security Fundamental</td><td>2</td><td>A</td></tr>
+                        <tr><td>LANG6027001</td><td>Indonesian</td><td>2</td><td>B+</td></tr>
+                        <tr><td>MATH6025001</td><td>Discrete Mathematics</td><td>4</td><td>B+</td></tr>
+                        <tr><td>MATH6030001</td><td>Linear Algebra</td><td>2</td><td>A-</td></tr>
+                        <tr><td>STAT6171001</td><td>Basic Statistics</td><td>2</td><td>B</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- Semester 2 -->
+                <h3 class="semester-title">Semester 2</h3>
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Codes</th>
+                            <th>Courses</th>
+                            <th>SCU</th>
+                            <th>Grades</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>CHAR6041001</td><td>Character Building: Kewarganegaraan</td><td>2</td><td>A-</td></tr>
+                        <tr><td>COMP6048001</td><td>Data Structures</td><td>4/2</td><td>B+</td></tr>
+                        <tr><td>CPEN6297001</td><td>Computer Network</td><td>2</td><td>A</td></tr>
+                        <tr><td>ENTR6509005</td><td>Entrepreneurship: Ideation</td><td>2</td><td>A</td></tr>
+                        <tr><td>MATH6031001</td><td>Calculus</td><td>4</td><td>B</td></tr>
+                        <tr><td>MATH6183001</td><td>Scientific Computing</td><td>2</td><td>B+</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- Semester 3 -->
+                <h3 class="semester-title">Semester 3</h3>
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Codes</th>
+                            <th>Courses</th>
+                            <th>SCU</th>
+                            <th>Grades</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>CHAR6051001</td><td>Character Building: Agama</td><td>2</td><td>A-</td></tr>
+                        <tr><td>COMP6049001</td><td>Algorithm Design and Analysis</td><td>4</td><td>A-</td></tr>
+                        <tr><td>COMP6062001</td><td>Compilation Techniques</td><td>4</td><td>A-</td></tr>
+                        <tr><td>COMP6055001</td><td>Artificial Intelligence</td><td>4</td><td>B</td></tr>
+                        <tr><td>COMP6544001</td><td>Network Penetration Testing</td><td>2/2</td><td>A</td></tr>
+                        <tr><td>COMP6798001</td><td>Program Design Methods</td><td>2</td><td>A</td></tr>
+                        <tr><td>SCIE6063001</td><td>Computational Physic</td><td>2/1</td><td>A-</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- Semester 4 -->
+                <h3 class="semester-title">Semester 4</h3>
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Codes</th>
+                            <th>Courses</th>
+                            <th>SCU</th>
+                            <th>Grades</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>COMP6059001</td><td>Software Engineering</td><td>4</td><td>A</td></tr>
+                        <tr><td>COMP6093001</td><td>Software Security</td><td>2</td><td>A</td></tr>
+                        <tr><td>COMP6546001</td><td>Database Technology</td><td>2/1</td><td>A</td></tr>
+                        <tr><td>COMP6799001</td><td>Server and Network Administration</td><td>2</td><td>A</td></tr>
+                        <tr><td>COMP6844001</td><td>Mobile Penetration Testing</td><td>2/2</td><td>A</td></tr>
+                        <tr><td>LAWS6101001</td><td>Cyber Law</td><td>2</td><td>A</td></tr>
+                        <tr><td>SCIE6062001</td><td>Computational Biology</td><td>2/1</td><td>A</td></tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+    </main>
+
+        </section> </main> <footer>
+        <p>&copy; 2025 Kevin Diaz Pramono. </p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="js/grades-chart.js"></script> 
+    <script src="js/script.js"></script>
+</body>
+</html>
